@@ -4,7 +4,8 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
-app = Flask(__name__)
+application = Flask(__name__)
+app = application # by doing this we do not need to edit every 'app' ..this is done for deploying purposes on aws
 
 # import lasso model and standard scaler pickle
 lasso_model = pickle.load(open('models/lasso.pkl', 'rb'))
